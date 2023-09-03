@@ -31,10 +31,6 @@ class Blog(models.Model):
     image_double_1 = models.ImageField(upload_to='images/', null=True, blank=True)
     image_double_2 = models.ImageField(upload_to='images/', null=True, blank=True)
 
-    @property
-    def get_count(self):
-        return self.objects.count()
-
     def __str__(self):
         return self.title
 
@@ -59,10 +55,6 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.name
-
-    @property
-    def get_count(self):
-        return self.objects.count()
 
 
 class Quiz(models.Model):
